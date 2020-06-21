@@ -35,35 +35,35 @@ void menu()
 {
 	float degFahrenheit;
 	float degCelsius;
-	int yksikko = 0;
-	printf("1: Muunna Celsiuksesta Fahrenheittiin.\n"
-		"2: Muunna Fahrenheitista Celsiukseen.\n"
-		"3: Muunna Celsiuksesta Kelviniin.\n"
-		"4: Muunna Fahrenheitista Kelviniin.\n"
-		"Valitse: ");
-	scanf("%1d", &yksikko);
+	int selection = 0;
+	printf("1: Convert Celsius to Fahrenheit.\n"
+		"2: Convert Fahrenheit to Celsius.\n"
+		"3: Convert Celsius to Kelvin.\n"
+		"4: Convert Fahrenheit to Kelvin.\n"
+		"Select: ");
+	scanf("%1d", &selection);
 
-	switch (yksikko) {
+	switch (selection) {
 	case 1:
-		printf("Syötä lämpötila Celsiuksena: ");
+		printf("Input temperature in Celsius: ");
 		scanf("%5f", &degCelsius);
 		printf("%.1f C on %.1f F\n",
 			degCelsius, celsiusToFahrenheit(degCelsius));
 		break;
 	case 2:
-		printf("Syötä lämpötila Fahrenheittina: ");
+		printf("Input temperature in Fahrenheit: ");
 		scanf("%5f", &degFahrenheit);
 		printf("%.1f F on %.1f C\n",
 			degFahrenheit, fahrenheitToCelsius(degFahrenheit));
 		break;
 	case 3:
-		printf("Syötä lämpötila Celsiuksena: ");
+		printf("Input temperature in Celsius: ");
 		scanf("%5f", &degCelsius);
 		printf("%.1f C on %.1f K\n",
 			degCelsius, celsiusToKelvin(degCelsius));
 		break;
 	case 4:
-		printf("Syötä lämpötila Fahrenheittina: ");
+		printf("Input temperature in Fahrenheit: ");
 		scanf("%5f", &degFahrenheit);
 		printf("%.1f F on %.1f K\n",
 			degFahrenheit, fahrenheitToKelvin(degFahrenheit));
