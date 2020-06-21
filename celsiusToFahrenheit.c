@@ -31,6 +31,7 @@ float celsiusToKelvin(float degCelsius)
 	return kelvin;
 }
 
+/* i use function for this to keep it as modular? as possible */
 void menu()
 {
 	float degFahrenheit;
