@@ -1,7 +1,6 @@
 # randomC
 /* my small C experiments */
 
-void goals() 
-{
-        printf("write easy-to-read code");
-}
+struct goals { 
+        char easy_to_read-code[20];
+};
