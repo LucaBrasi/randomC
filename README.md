@@ -1,5 +1,5 @@
-# randomC
-# my small C experiments #
+## randomC
+### my small C experiments #
 
 ```C
 struct goals { 
