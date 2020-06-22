@@ -48,25 +48,25 @@ void menu(void)
 	case 1:
 		printf("Input temperature in Celsius: ");
 		scanf("%5f", &degCelsius);
-		printf("%.1f C on %.1f F\n",
+		printf("%.1f C is %.1f F\n",
 			degCelsius, celsiusToFahrenheit(degCelsius));
 		break;
 	case 2:
 		printf("Input temperature in Fahrenheit: ");
 		scanf("%5f", &degFahrenheit);
-		printf("%.1f F on %.1f C\n",
+		printf("%.1f F is %.1f C\n",
 			degFahrenheit, fahrenheitToCelsius(degFahrenheit));
 		break;
 	case 3:
 		printf("Input temperature in Celsius: ");
 		scanf("%5f", &degCelsius);
-		printf("%.1f C on %.1f K\n",
+		printf("%.1f C is %.1f K\n",
 			degCelsius, celsiusToKelvin(degCelsius));
 		break;
 	case 4:
 		printf("Input temperature in Fahrenheit: ");
 		scanf("%5f", &degFahrenheit);
-		printf("%.1f F on %.1f K\n",
+		printf("%.1f F is %.1f K\n",
 			degFahrenheit, fahrenheitToKelvin(degFahrenheit));
 		break;
 	default:

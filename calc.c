@@ -1,11 +1,5 @@
 #include <stdio.h>
 
-int num1, num2;
-void selection(void);
-void sum(void);
-void difference(void);
-void product(void);
-
 /*	int getnum(int, int);
 *	int getnum(int, int);
 *	{
@@ -13,6 +7,12 @@ void product(void);
 *	        with this?
 *	}
 */
+
+int num1, num2;
+void selection(void);
+void sum(void);
+void difference(void);
+void product(void);
 
 void selection(void)
 {
@@ -36,6 +36,8 @@ void selection(void)
                         break;
                 case 'q':
                         printf("Closing program...");
+                        break;
+                default:
                         break;
         }
 }
