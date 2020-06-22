@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 int num1, num2;
-void menu(void);
 void selection(void);
 void sum(void);
 void difference(void);
