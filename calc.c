@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-int luku1, luku2;
+int num1, num2;
 void menu(void);
-void valinta(void);
-void summa(void);
-void erotus(void);
-void tulo(void);
+void selection(void);
+void sum(void);
+void difference(void);
+void product(void);
 
-/*	int getLuku()
-*	int getLuku(int);
+/*	int getnum()
+*	int getnum(int);
 *	{
 *	 kerää numerot tällä?
 *	
@@ -16,71 +16,70 @@ void tulo(void);
 */
 void menu(void)
 {
-	printf("1: kahden luvun summa\n"
-		"2: kahden luvun erotus\n"
-		"3: kahden luvun tulo\n");
-	printf("<0 ohjelman lopetus\n");
-
+	printf("1: The sum of two\n"
+		"2: The difference of two\n"
+		"3: The product of two\n"
+                "q: quit program\n");
 }
 
-void valinta(void)
+void selection(void)
 {
-	int valinta;
-	do{
-		menu();
-		printf("Valitse laskutoimitus:");
-		scanf("%d", &valinta);
-		if(valinta < 0) {
-			printf("Ohjelma lopetetaan...");
-		}
-		else if(valinta == 1) {
-			summa();
-		}
-		else if(valinta == 2) {
-			erotus();
-		}
-		else if(valinta == 3) {
-			tulo();
-		}
-		else {
-			printf("Antamasi luku ei kelpaa.\n\n");
-		}
-	}while(valinta>0);
+        int selection;
+        printf("1: The sum of two\n"
+                "2: The difference of two\n"
+                "3: The product of two\n"
+                "q: quit program\n\n"
+                "Choose operation:");
+        scanf("%d", &selection);
+
+        switch (selection) {
+                case 1:
+                        sum();
+                        break;
+                case 2:
+                        difference();
+                        break;
+                case 3:
+                        product();
+                        break;
+                case 'q':
+                        printf("Closing program...");
+                        break;
+        }
 }
 
-void summa(void)
+void sum(void)
 {
-	printf("Syötä ensimmäinen luku:");
-	scanf("%d", &luku1);
-	printf("Syötä toinen luku:");
-	scanf("%d", &luku2);
-	int summa = luku1 + luku2;
-	printf("%d + %d = %d\n\n", luku1, luku2, summa);
+	printf("input first number:");
+	scanf("%d", &num1);
+	printf("input second number:");
+	scanf("%d", &num2);
+	int sum = num1 + num2;
+	printf("%d + %d = %d\n\n", num1, num2, sum);
 }
 
-void erotus(void)
+void difference(void)
 {
-	printf("Syötä ensimmäinen luku:");
-	scanf("%d", &luku1);
-	printf("Syötä toinen luku:");
-	scanf("%d", &luku2);
-	int erotus = luku1 - luku2;
-	printf("%d - %d = %d\n\n", luku1, luku2, erotus);
+	printf("input first number:");
+	scanf("%d", &num1);
+	printf("input second number:");
+	scanf("%d", &num2);
+	int difference = num1 - num2;
+	printf("%d - %d = %d\n\n", num1, num2, difference);
 }
 
-void tulo(void)
+void product(void)
 {
-	printf("Syötä ensimmäinen luku:");
-	scanf("%d", &luku1);
-	printf("Syötä toinen luku:");
-	scanf("%d", &luku2);
-	int tulos = luku1 * luku2;
-	printf("%d * %d = %d\n\n", luku1, luku2, tulos);
+	printf("input first number:");
+	scanf("%d", &num1);
+	printf("input second number:");
+	scanf("%d", &num2);
+	int products = num1 * num2;
+	printf("%d * %d = %d\n\n", num1, num2, products);
 }
 
 int main(void)
 {
-	menu();
-	valinta();
+	selection();
 	return 0;
 }
