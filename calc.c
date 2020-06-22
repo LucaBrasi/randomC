@@ -7,20 +7,13 @@ void sum(void);
 void difference(void);
 void product(void);
 
-/*	int getnum()
-*	int getnum(int);
+/*	int getnum(int, int);
+*	int getnum(int, int);
 *	{
-*	 kerää numerot tällä?
-*	
+*	        collect numbers
+*	        with this?
 *	}
 */
-void menu(void)
-{
-	printf("1: The sum of two\n"
-		"2: The difference of two\n"
-		"3: The product of two\n"
-                "q: quit program\n");
-}
 
 void selection(void)
 {
