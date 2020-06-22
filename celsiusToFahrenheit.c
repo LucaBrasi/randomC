@@ -5,7 +5,7 @@ float fahrenheitToCelsius(float degFahrenheit);
 float celsiusToFahrenheit(float degCelsius);
 float fahrenheitToKelvin(float degFahrenheit);
 float celsiusToKelvin(float degCelsius);
-void menu();
+void menu(void);
 
 float fahrenheitToCelsius(float degFahrenheit)
 {
@@ -32,7 +32,7 @@ float celsiusToKelvin(float degCelsius)
 }
 
 /* i use function for this to keep it as modular? as possible */
-void menu()
+void menu(void)
 {
 	float degFahrenheit;
 	float degCelsius;
