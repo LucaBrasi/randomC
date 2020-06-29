@@ -1,17 +1,10 @@
-#!/usr/bin/tcc -run
 #include <stdio.h>
 
-float fahrenheitToCelsius(float degFahrenheit);
 float celsiusToFahrenheit(float degCelsius);
-float fahrenheitToKelvin(float degFahrenheit);
+float fahrenheitToCelsius(float degFahrenheit);
 float celsiusToKelvin(float degCelsius);
+float fahrenheitToKelvin(float degFahrenheit);
 void menu(void);
-
-float fahrenheitToCelsius(float degFahrenheit)
-{
-	float celsius = (degFahrenheit - 32) / 1.8;
-	return celsius;
-}
 
 float celsiusToFahrenheit(float degCelsius)
 {
@@ -19,15 +12,21 @@ float celsiusToFahrenheit(float degCelsius)
 	return fahrenheit; 
 }
 
-float fahrenheitToKelvin(float degFahrenheit)
+float fahrenheitToCelsius(float degFahrenheit)
 {
-	float kelvin = (degFahrenheit - 32) / 1.8 + 273.15;
-	return kelvin;
+	float celsius = (degFahrenheit - 32) / 1.8;
+	return celsius;
 }
 
 float celsiusToKelvin(float degCelsius)
 {
 	float kelvin = degCelsius + 273.15;
+	return kelvin;
+}
+
+float fahrenheitToKelvin(float degFahrenheit)
+{
+	float kelvin = fahrenheitToCelsius(degFahrenheit) + 273.15;
 	return kelvin;
 }
 
