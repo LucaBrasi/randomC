@@ -2,6 +2,7 @@
 
 /* fibonacci number is the sum of 2 previous numbers
  * f = f1 + f2
+ * This program prints fibonacci number and char to visualize it.
  */
 
 int f1 = 0,
@@ -21,10 +22,10 @@ int main(void)
         f = f1 + f2;
 
         while (f <= n) {
-                printf("%d\n", f);
-
+/*                printf("%d\n", f);
+*/
                 for (i = 1; i <= f; i++) {
-                        putchar('-');
+                        putchar('|');
                 }
 
                 putchar('\n');
