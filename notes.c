@@ -30,12 +30,21 @@ int main(void)
 
     printf("Pick a scale:\n"
             "C, G, D, A, E, B, Gb, Db, Ab, Eb, Bb, F\n: ");
-    scanf("%c", selection);
+    scanf("%s", selection);
     for (i = 0; i < 11; i++) {
-        if (selection[0] == scales[i][0] && scales[i][1] != 'b') {
+        if (selection[0] == scales[i][0] &&
+            selection[1] != 'b' &&
+            scales[i][1] != 'b') {
+            
             printf(scales[i]);
             printf("\n");
-            printf("%d\n", i);
+            printf("%d\n", i + 1);
+        } else if (selection[0] == scales[i][0] &&
+                   selection[1] == 'b' &&
+                   scales[i][1] == 'b') {
+            printf(scales[i]);
+            printf("\n");
+            printf("%d\n", i + 1);
         }
     }
     return 0;
