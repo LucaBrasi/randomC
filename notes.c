@@ -1,50 +1,48 @@
 #include <stdio.h>
 #include <string.h>
+
 #define MAX_SCALE_SIZE 48
 #define SCALES 12
-
 
 int main(void)
 {
     int i;
     char selection[2];
-    //char CM[SCALES][MAX_SCALE_SIZE];
     char scales[SCALES][MAX_SCALE_SIZE] = {
-        "C, D, E, F, G, A, B\0",
-        "G, A, B, C, D, E, F#\0",
-        "D, E, F#, G, A, B, C#\0",
-        "A, B, C#, D, E, F#, G#\0",
-        "E, F#, G#, A, B, C#, D#\0",
-        "B, C#, D#, E, F#, G#, A#\0",
-        "Gb, Ab, Bb, Cb, Db, Eb, F\0",
-        "Db, Eb, F, Gb, Ab, Bb, C\0",
-        "Ab, Bb, C, Db, Eb, F, G\0",
-        "Eb, F, G, Ab, Bb, C, D\0",
-        "Bb, C, D, Eb, F, G, A\0",
-        "F, G, A, Bb, C, D, E\0"
+        "C, D, E, F, G, A, B",
+        "G, A, B, C, D, E, F#",
+        "D, E, F#, G, A, B, C#",
+        "A, B, C#, D, E, F#, G#",
+        "E, F#, G#, A, B, C#, D#",
+        "B, C#, D#, E, F#, G#, A#",
+        "Gb, Ab, Bb, Cb, Db, Eb, F",
+        "Db, Eb, F, Gb, Ab, Bb, C",
+        "Ab, Bb, C, Db, Eb, F, G",
+        "Eb, F, G, Ab, Bb, C, D",
+        "Bb, C, D, Eb, F, G, A",
+        "F, G, A, Bb, C, D, E"
     };
 
-    //memset(CM, '\0', sizeof(CM));
-    //strcpy(CM[0], scales[11]);
-    //printf("test = %s\n", CM[0]);
-
-    printf("Pick a scale:\n"
+    printf("Pick a major scale:\n"
             "C, G, D, A, E, B, Gb, Db, Ab, Eb, Bb, F\n: ");
     scanf("%s", selection);
-    for (i = 0; i < 11; i++) {
+
+    for (i = 0; i < 12; i++) {
         if (selection[0] == scales[i][0] &&
             selection[1] != 'b' &&
             scales[i][1] != 'b') {
             
+            printf("\n");
+            printf("%c major scale: \n", selection[0]);
             printf(scales[i]);
             printf("\n");
-            printf("%d\n", i + 1);
         } else if (selection[0] == scales[i][0] &&
                    selection[1] == 'b' &&
                    scales[i][1] == 'b') {
+            printf("\n");
+            printf("%c%c major scale: \n", selection[0], selection[1]);
             printf(scales[i]);
             printf("\n");
-            printf("%d\n", i + 1);
         }
     }
     return 0;
