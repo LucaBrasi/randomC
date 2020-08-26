@@ -1,22 +1,14 @@
 #include <stdio.h>
 
-/*	int getnum(int, int);
- *	int getnum(int, int);
- *	{
- *	        collect numbers
- *	        with this?
- *	}
- */
-
-int num1, num2;
 void selection(void);
-void sum(void);
-void difference(void);
-void product(void);
+void sum(int n1, int n2);
+void difference(int n1, int n2);
+void product(int n1, int n2);
 
 void selection(void)
 {
-    int selection;
+    int n1, n2, selection;
+
     printf("1: The sum of two\n"
             "2: The difference of two\n"
             "3: The product of two\n"
@@ -24,15 +16,20 @@ void selection(void)
             "Choose operation:");
     scanf("%d", &selection);
 
+    printf("input first number:");
+    scanf("%d", &n1);
+    printf("input second number:");
+    scanf("%d", &n2);
+
     switch (selection) {
         case 1:
-            sum();
+            sum(n1, n2);
             break;
         case 2:
-            difference();
+            difference(n1, n2);
             break;
         case 3:
-            product();
+            product(n1, n2);
             break;
         case 'q':
             printf("Closing program...");
@@ -42,34 +39,22 @@ void selection(void)
     }
 }
 
-void sum(void)
+void sum(int n1, int n2)
 {
-    printf("input first number:");
-    scanf("%d", &num1);
-    printf("input second number:");
-    scanf("%d", &num2);
-    int sum = num1 + num2;
-    printf("%d + %d = %d\n\n", num1, num2, sum);
+    int sum = n1 + n2;
+    printf("%d + %d = %d\n\n", n1, n2, sum);
 }
 
-void difference(void)
+void difference(int n1, int n2)
 {
-    printf("input first number:");
-    scanf("%d", &num1);
-    printf("input second number:");
-    scanf("%d", &num2);
-    int difference = num1 - num2;
-    printf("%d - %d = %d\n\n", num1, num2, difference);
+    int difference = n1 - n2;
+    printf("%d - %d = %d\n\n", n1, n2, difference);
 }
 
-void product(void)
+void product(int n1, int n2)
 {
-    printf("input first number:");
-    scanf("%d", &num1);
-    printf("input second number:");
-    scanf("%d", &num2);
-    int products = num1 * num2;
-    printf("%d * %d = %d\n\n", num1, num2, products);
+    int products = n1 * n2;
+    printf("%d * %d = %d\n\n", n1, n2, products);
 }
 
 int main(void)
