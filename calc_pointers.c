@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 void selection(void);
-void sum(int *num1, int *num2);
-void difference(int *num1, int *num2);
-void product(int *num1, int *num2);
+int sum(int *num1, int *num2);
+int difference(int *num1, int *num2);
+int product(int *num1, int *num2);
 
 void selection(void)
 {
@@ -12,7 +12,6 @@ void selection(void)
     printf("1: The sum of two\n"
             "2: The difference of two\n"
             "3: The product of two\n"
-            "q: quit program\n\n"
             "Choose operation:");
     scanf("%d", &selection);
 
@@ -23,38 +22,32 @@ void selection(void)
 
     switch (selection) {
         case 1:
-            sum(&num1, &num2);
+            printf("%d + %d = %d\n", num1, num2, sum(&num1, &num2));
             break;
         case 2:
-            difference(&num1, &num2);
+            printf("%d - %d = %d\n", num1, num2, difference(&num1, &num2));
             break;
         case 3:
-            product(&num1, &num2);
-            break;
-        case 'q':
-            printf("Closing program...");
+            printf("%d * %d = %d\n", num1, num2, product(&num1, &num2));
             break;
         default:
             break;
     }
 }
 
-void sum(int *num1, int *num2)
+int sum(int *num1, int *num2)
 {
-    int sum = *num1 + *num2;
-    printf("%d + %d = %d\n\n", *num1, *num2, sum);
+    return *num1 + *num2;
 }
 
-void difference(int *num1, int *num2)
+int difference(int *num1, int *num2)
 {
-    int difference = *num1 - *num2;
-    printf("%d - %d = %d\n\n", *num1, *num2, difference);
+    return *num1 - *num2;
 }
 
-void product(int *num1, int *num2)
+int product(int *num1, int *num2)
 {
-    int products = *num1 * *num2;
-    printf("%d * %d = %d\n\n", *num1, *num2, products);
+    return *num1 * *num2;
 }
 
 int main(void)
